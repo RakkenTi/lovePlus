@@ -9,6 +9,14 @@ function util.getSignFromNum(num)
     if (num > 0) then return 1 elseif (num < 0) then return -1 else return 0 end
 end
 
+--- Returns the mouses position scaled relative to the screen as a tuple.
+--- @return number, number
+function util.getMouseScalePos()
+    local sx, sy = love.window.getMode()
+    local x, y = love.mouse.getPosition()
+    return x / sx, y / sy
+end
+
 --- Get the position of the mouse as a number ranging from 0-1.
 --- @return (nunber, number)
 function util.getMouseScalePos()
