@@ -4,12 +4,13 @@ vector2d.__index = vector2d
 
 --- @class Vector2d : Vector2dClass
 --- Creates a new Vector2d object.
+--- @field public x number
+--- @field public y number
 --- @param x number
 --- @param y number
 --- @return Vector2d
 function vector2d.new(x, y)
     local self = setmetatable({
-
     }, vector2d)
 
     self.x = x or 0
