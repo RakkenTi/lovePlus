@@ -1,6 +1,8 @@
 local vector2d = {}
 vector2d.__index = vector2d
 
+--- @class Vector2d
+--- Creates a new Vector2d object.
 function vector2d.new(x, y)
     local self = setmetatable({
 
