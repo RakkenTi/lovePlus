@@ -14,8 +14,8 @@ function spring.new(targetPos, endPos, force, damping)
     local self = setmetatable({}, spring)
 
     self.velocity = vector2.new()
-    self.targetPos = targetPos
-    self.endPos = endPos
+    self.targetPos = targetPos or vector2.new()
+    self.endPos = endPos or vector2.new()
     self.force = force or 1
     self.damping = damping or 2
 
