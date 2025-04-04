@@ -1,8 +1,11 @@
+--- @class Vector2dClass
 local vector2d = {}
 vector2d.__index = vector2d
 
---- @class Vector2d
+--- @class Vector2d : Vector2dClass
 --- Creates a new Vector2d object.
+--- @param x number
+--- @param y number
 --- @return Vector2d
 function vector2d.new(x, y)
     local self = setmetatable({
