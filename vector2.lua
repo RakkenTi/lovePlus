@@ -1,14 +1,14 @@
---- @class Vector2dClass
+--- @class Vector2Class
 local vector2 = {}
 vector2.__index = vector2
 
---- @class Vector2d
+--- @class Vector2
 --- Creates a new Vector2d object.
 --- @field public x number
 --- @field public y number
 --- @param x number
 --- @param y number
---- @return Vector2d
+--- @return Vector2
 function vector2.new(x, y)
     local self = setmetatable({
     }, vector2)
