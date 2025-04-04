@@ -41,11 +41,12 @@ function spring:setDamping(damping)
     self.damping = damping
 end
 
-function spring:update()
+function spring:update(dt)
     local displacement = self.endPos - self.targetPos
-    local acceleration = (displacement * -self.force) / self.damping
-    self.velocity = self.velocity + acceleration
-    return self.velocity
+    local acceleration = (displacement * -self.force) * dt
+    self.velocity = (self.velocity + acceleration) * self.damping
+    self:setEndPos(self.endPos + self.velocity)
+    return self.endPos
 end
 
 return spring
