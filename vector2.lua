@@ -8,6 +8,8 @@ vector2.__index = vector2
 --- @field public y number
 --- @param x number
 --- @param y number
+--- @field Magnitude
+--- @field Unit
 --- @return Vector2
 function vector2.new(x, y)
     local self = setmetatable({
