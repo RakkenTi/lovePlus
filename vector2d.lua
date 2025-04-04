@@ -2,7 +2,7 @@
 local vector2d = {}
 vector2d.__index = vector2d
 
---- @class Vector2d : Vector2dClass
+--- @class Vector2d
 --- Creates a new Vector2d object.
 --- @field public x number
 --- @field public y number
