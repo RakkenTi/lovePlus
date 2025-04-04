@@ -34,4 +34,9 @@ function util.clamp(num, min, max)
     return num
 end
 
+--- Lerp between a and b, using t
+function util.lerp(a, b, t)
+    return a + (b - a) * t
+end
+
 return util
