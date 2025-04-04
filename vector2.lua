@@ -6,10 +6,10 @@ vector2.__index = vector2
 --- Creates a new Vector2d object.
 --- @field public x number
 --- @field public y number
+--- @field public Magnitude number
+--- @field public Unit Vector2
 --- @param x number
 --- @param y number
---- @field Magnitude
---- @field Unit
 --- @return Vector2
 function vector2.new(x, y)
     local self = setmetatable({
