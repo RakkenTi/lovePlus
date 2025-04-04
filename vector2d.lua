@@ -3,6 +3,7 @@ vector2d.__index = vector2d
 
 --- @class Vector2d
 --- Creates a new Vector2d object.
+--- @return Vector2d
 function vector2d.new(x, y)
     local self = setmetatable({
 
