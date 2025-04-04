@@ -40,7 +40,7 @@ end
 
 function spring:get()
     local displacement = self.endPos - self.targetPos
-    local acceleration = (-self.force * displacement) / self.damping
+    local acceleration = (displacement * -self.force) / self.damping
     return acceleration
 end
 
