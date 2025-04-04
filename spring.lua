@@ -1,3 +1,5 @@
+local vector2 = require("src.shared.utils.vector2")
+
 --- @class springClass
 local spring = {}
 spring.__index = spring
@@ -11,6 +13,7 @@ spring.__index = spring
 function spring.new(targetPos, endPos, force, damping)
     local self = setmetatable({}, spring)
 
+    self.velocity = vector2.new()
     self.targetPos = targetPos
     self.endPos = endPos
     self.force = force or 1
@@ -38,10 +41,15 @@ function spring:setDamping(damping)
     self.damping = damping
 end
 
-function spring:get()
-    local displacement = self.targetPos - self.endPos
+function spring:update()
+    local displacement = self.endPos - self.targetPos
     local acceleration = (displacement * -self.force) / self.damping
-    return acceleration
+    self.velocity = self.velocity + acceleration
+    self:setTargetPos(self.targetPos + self.velocity)
+end
+
+function spring:getVelocity()
+    return self.velocity
 end
 
 return spring
