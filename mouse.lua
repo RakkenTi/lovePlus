@@ -15,7 +15,7 @@ function mouse.pressed()
 end
 
 function mouse.released()
-    for _, callback in ipairs(mouse.onReleased) do
+    for _, callback in ipairs(mouse.onRelease) do
         callback()
     end
 end
