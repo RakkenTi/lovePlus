@@ -37,7 +37,7 @@ function vector2.__index(t, k)
         return vector2.new(t.x / t.Magnitude, t.y / t.Magnitude)
     end
 
-    return rawget(t, k)
+    return rawget(vector2, k)
 end
 
 function vector2.__add(a, b)
