@@ -9,7 +9,7 @@ local mouse = {
 
 -- Functions to call in love
 function mouse.pressed()
-    for _, callback in ipairs(mouse.onPressTs) do
+    for _, callback in ipairs(mouse.onPressT) do
         callback()
     end
 end
