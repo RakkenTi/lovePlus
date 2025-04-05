@@ -1,7 +1,10 @@
+--- Mouse scheduler
 --- @class mouse
 local mouse = {
     onRelease = {},
-    onPress = {}
+    onPress = {},
+    onMove = {},
+    onWheelMove = {},
 }
 
 function mouse.pressed()
@@ -20,9 +23,20 @@ end
 function mouse.onPressed(callback)
     table.insert(mouse.onPress, callback)
 end
+
 --- @param callback function
 function mouse.onReleased(callback)
     table.insert(mouse.onRelease, callback)
+end
+
+--- @param callback function
+function mouse.onWheelMoved(callback)
+    table.insert(mouse.onWheelMove, callback)
+end
+
+--- @param callback function
+function mouse.onMove(callback)
+    table.insert(mouse.onMove, callback)
 end
 
 return mouse
