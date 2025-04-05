@@ -33,7 +33,7 @@ function button.new(RECT)
         local mousePos = love.mouse.getPosition()
         if (self.rect:isInside(mousePos) and not self.isHover) then
             self.isHover = true
-            self.hoverCallback(true`)
+            self.hoverCallback(true)
         else
             if (self.isHover == true) then
                 self.hoverCallback(false)
