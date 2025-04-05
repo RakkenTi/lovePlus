@@ -7,6 +7,7 @@ local mouse = {
     onWheelMove = {},
 }
 
+-- Functions to call in love
 function mouse.pressed()
     for _, callback in ipairs(mouse.onPress) do
         callback()
@@ -18,6 +19,20 @@ function mouse.released()
         callback()
     end
 end
+
+function mouse.moved()
+    for _, callback in ipairs(mouse.onMove) do
+        callback()
+    end
+end
+
+function mouse.wheelmoved()
+    for _, callback in ipairs(mouse.onWheelMove) do
+        callback()
+    end
+end
+
+-- Public functions
 
 --- @param callback function
 function mouse.onPressed(callback)
