@@ -7,8 +7,8 @@ spring.__index = spring
 --- @class spring
 --- @param targetPos Vector2 Where the spring is rooted, ie: pulling into
 --- @param endPos Vector2 The point that the spring is pulling in to the target.
---- @param force number? How much force to attract with
---- @param damping number? How much to diffuse the acceleration by.
+--- @param force number How much force to attract with
+--- @param damping number How much to diffuse the acceleration by.
 --- Creates an instance of the spring class.
 function spring.new(targetPos, endPos, force, damping)
     local self = setmetatable({}, spring)

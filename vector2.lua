@@ -21,6 +21,11 @@ function vector2.new(x, y)
     return self
 end
 
+--// Public Methods
+function vector2:extract()
+    return {self.x, self.y}
+end
+
 --// Metamethods
 function vector2.__index(t, k)
 
