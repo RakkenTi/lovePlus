@@ -35,17 +35,17 @@ end
 -- Public functions
 
 --- @param callback function
-function mouse.onPressed(callback)
+function mouse.onPress(callback)
     table.insert(mouse.onPress, callback)
 end
 
 --- @param callback function
-function mouse.onReleased(callback)
+function mouse.onRelease(callback)
     table.insert(mouse.onRelease, callback)
 end
 
 --- @param callback function
-function mouse.onWheelMoved(callback)
+function mouse.onWheelMove(callback)
     table.insert(mouse.onWheelMove, callback)
 end
 
