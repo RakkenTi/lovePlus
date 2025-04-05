@@ -18,7 +18,7 @@ function util.getMouseScalePos()
 end
 
 --- Get the position of the mouse as a number ranging from 0-1.
---- @return (nunber, number)
+--- @return number, number
 function util.getMouseScalePos()
     local screenSizeX, screenSizeY = love.window.getMode()
     local mousePosX, mousePosY = love.mouse.getPosition()
