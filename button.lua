@@ -54,6 +54,7 @@ end
 --- @param callback function
 function button:setClickCallback(callback)
     self.callback = callback
+    self.isHover = false
 end
 
 --- Set the callback of the button. Passes in a boolean state reprenting if its onHover or offHover
