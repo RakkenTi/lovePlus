@@ -11,15 +11,15 @@ local button = {}
 button.__index = button
 
 --- @class button : buttonClass
---- @param rect Rect
+--- @param RECT Rect
 --- Wraps a rectangle with special button behaviour.
-function button.new(rect)
+function button.new(RECT)
     local self = setmetatable({}, button)
 
     self.callback = function() end
     self.hoverCallback = function()  end
     self.isHover = false
-    self.rect = rect
+    self.rect = RECT
     mouse.onRelease(function()
         if (self.rect:isInside(vector2.new(love.mouse.getPosition()))) then
             if (self.callback) then
