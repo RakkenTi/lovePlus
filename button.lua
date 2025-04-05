@@ -26,6 +26,14 @@ function button.new(rect)
         end
     end)
 
+    run.onUpdate(function()
+        self.rect:update()
+    end)
+
+    run.onDraw(function()
+        self.rect:draw()
+    end)
+
     return self
 end
 
