@@ -61,7 +61,6 @@ function textClass:draw()
     love.graphics.setColor(self.colour)
     love.graphics.setFont(self.font)
     love.graphics.print(self.text, self.pos.x * screenSize.x, self.pos.y * screenSize.y)
-    love.graphics.setColor()
 end
 
 return textClass
