@@ -54,7 +54,10 @@ end
 --- @param callback function
 function button:setClickCallback(callback)
     self.callback = callback
+
+    -- Disable hover
     self.isHover = false
+    self.hoverCallback(false)
 end
 
 --- Set the callback of the button. Passes in a boolean state reprenting if its onHover or offHover
