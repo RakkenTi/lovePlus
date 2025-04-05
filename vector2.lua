@@ -44,11 +44,27 @@ function vector2.__sub(a, b)
 end
 
 function vector2.__div(a, b)
-    return vector2.new(a.x / b, a.y / b)
+    if (type(a) == "table" and type(b) == "table") then
+        return vector2.new(a.x / b.x, a.y / b.y)
+    end
+    if (type(a) == "table" and type(b) == "number") then
+        return vector2.new(a.x / b, a.y / b)
+    end
+
+    error("Invalid parameters to division involving Vector2.")
+    return nil
 end
 
 function vector2.__mul(a, b)
-    return vector2.new(a.x * b, a.y * b)
+    if (type(a) == "table" and type(b) == "table") then
+        return vector2.new(a.x * b.x, a.y * b.y)
+    end
+    if (type(a) == "table" and type(b) == "number") then
+        return vector2.new(a.x * b, a.y * b)
+    end
+
+    error("Invalid parameters to multiplication involving Vector2.")
+    return nil
 end
 
 function vector2.__eq(a, b)

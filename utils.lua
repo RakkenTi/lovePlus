@@ -42,6 +42,14 @@ function util.clamp(num, min, max)
     return num
 end
 
+--- Divide all numbers in a 3-length array by 255.
+--- Useful for converting RGB to HST.
+--- @param colour number[]
+--- @return number[]
+function util.RGBtoHST(colour)
+    return {colour[1] / 255, colour[2] / 255, colour[3] / 255}
+end
+
 --- Lerp between a and b, using t
 function util.lerp(a, b, t)
     return a + (b - a) * t
