@@ -24,6 +24,9 @@ function button.new(RECT)
         if (self.rect:isInside(vector2.new(love.mouse.getPosition()))) then
             if (self.callback) then
                 self.callback()
+                -- Disable hover
+                self.isHover = false
+                self.hoverCallback(false)
             end
         end
     end)
@@ -54,10 +57,6 @@ end
 --- @param callback function
 function button:setClickCallback(callback)
     self.callback = callback
-
-    -- Disable hover
-    self.isHover = false
-    self.hoverCallback(false)
 end
 
 --- Set the callback of the button. Passes in a boolean state reprenting if its onHover or offHover
