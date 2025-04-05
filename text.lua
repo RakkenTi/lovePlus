@@ -20,7 +20,7 @@ end)
 --- @param anchor Vector2 The anchor position of the text.
 --- @param colour number[]
 function textClass.new(text, font, position, anchor, colour)
-    local self = setmetatable({}, text)
+    local self = setmetatable({}, textClass)
 
     self.text = text
     self.font = font
