@@ -34,7 +34,7 @@ function button.new(RECT)
         if (self.rect:isInside(mousePos) and not self.isHover) then
             self.isHover = true
             self.hoverCallback(true)
-        else
+        elseif (not self.rect:isInside(mousePos)) then
             if (self.isHover == true) then
                 self.hoverCallback(false)
                 self.isHover = false
