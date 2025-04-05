@@ -17,6 +17,8 @@ function button.new(rect)
     local self = setmetatable({}, button)
 
     self.callback = function() end
+    self.hoverCallback = function()  end
+    self.isHover = false
     self.rect = rect
     mouse.onRelease(function()
         if (self.rect:isInside(vector2.new(love.mouse.getPosition()))) then
@@ -28,6 +30,16 @@ function button.new(rect)
 
     run.onUpdate(function()
         self.rect:update()
+        local mousePos = love.mouse.getPosition()
+        if (self.rect:isInside(mousePos) and not self.isHover) then
+            self.isHover = true
+            self.hoverCallback(true`)
+        else
+            if (self.isHover == true) then
+                self.hoverCallback(false)
+                self.isHover = false
+            end
+        end
     end)
 
     run.onDraw(function()
@@ -40,8 +52,12 @@ end
 --- Set the callback for the button-press action
 --- Note that a button press only accounts for a mouse being released within the buttons boundaries.
 --- @param callback function
-function button:setCallback(callback)
+function button:setClickCallback(callback)
     self.callback = callback
+end
+
+function button:setHoverCallback(callback)
+    self.hoverCallback = callback
 end
 
 return button
