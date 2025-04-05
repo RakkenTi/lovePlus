@@ -36,7 +36,7 @@ end
 
 --- @param callback function
 function run.onDraw(callback)
-    table.insert(run.onLoadT, callback)
+    table.insert(run.onDrawT, callback)
 end
 
 --- @param callback function
