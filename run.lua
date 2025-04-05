@@ -1,33 +1,33 @@
 --- Mouse scheduler
---- @class mouse
-local mouse = {
-    onReleaseT = {},
-    onPressT = {},
-    onMoveT = {},
-    onWheelMoveT = {},
+--- @class run
+local run = {
+    onDrawT = {},
+    onUpdateT = {},
+    onQuitT = {},
+    onLoadT = {},
 }
 
 -- Functions to call in love
-function mouse.pressed()
-    for _, callback in ipairs(mouse.onPressT) do
+function run.draw()
+    for _, callback in ipairs(run.onDrawT) do
         callback()
     end
 end
 
-function mouse.released()
-    for _, callback in ipairs(mouse.onReleaseT) do
+function run.update()
+    for _, callback in ipairs(run.onUpdateT) do
         callback()
     end
 end
 
-function mouse.moved()
-    for _, callback in ipairs(mouse.onMoveT) do
+function run.quit()
+    for _, callback in ipairs(run.onQuitT) do
         callback()
     end
 end
 
-function mouse.wheelmoved()
-    for _, callback in ipairs(mouse.onWheelMoveT) do
+function run.load()
+    for _, callback in ipairs(run.onLoadT) do
         callback()
     end
 end
@@ -35,23 +35,23 @@ end
 -- Public functions
 
 --- @param callback function
-function mouse.onPress(callback)
-    table.insert(mouse.onPressT, callback)
+function run.onDraw(callback)
+    table.insert(run.onLoadT, callback)
 end
 
 --- @param callback function
-function mouse.onRelease(callback)
-    table.insert(mouse.onReleaseT, callback)
+function run.onUpdate(callback)
+    table.insert(run.onUpdateT, callback)
 end
 
 --- @param callback function
-function mouse.onWheelMove(callback)
-    table.insert(mouse.onWheelMoveT, callback)
+function run.onQuit(callback)
+    table.insert(run.onQuitT, callback)
 end
 
 --- @param callback function
-function mouse.onMove(callback)
-    table.insert(mouse.onMoveT, callback)
+function run.onLoad(callback)
+    table.insert(run.onLoadT, callback)
 end
 
-return mouse
+return run
