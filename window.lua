@@ -11,45 +11,45 @@ local window = {
 }
 
 -- Functions to call in love
-function window.directoryDropped(path)
+function window.directoryDropped(...)
     for _, callback in ipairs(window.onDirectoryDroppedT) do
-        callback(path)
+        callback(...)
     end
 end
 
-function window.displayRotated(rotation)
+function window.displayRotated(...)
     for _, callback in ipairs(window.onDisplayRotatedT) do
-        callback(rotation)
+        callback(...)
     end
 end
 
-function window.fileDropped(filename)
+function window.fileDropped(...)
     for _, callback in ipairs(window.onFileDroppedT) do
-        callback(filename)
+        callback(...)
     end
 end
 
-function window.focus(focused)
+function window.focus(...)
     for _, callback in ipairs(window.onFocusT) do
-        callback(focused)
+        callback(...)
     end
 end
 
-function window.mouseFocus(focused)
+function window.mouseFocus(...)
     for _, callback in ipairs(window.onMouseFocusT) do
-        callback(focused)
+        callback(...)
     end
 end
 
-function window.resize(w, h)
+function window.resize(...)
     for _, callback in ipairs(window.onResizeT) do
-        callback(w, h)
+        callback(...)
     end
 end
 
-function window.visible(visible)
+function window.visible(...)
     for _, callback in ipairs(window.onVisibleT) do
-        callback(visible)
+        callback(...)
     end
 end
 
