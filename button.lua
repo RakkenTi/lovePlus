@@ -31,7 +31,7 @@ function button.new(RECT)
         end
     end)
 
-    run.onUpdate(function()
+    run.onUpdatew(function()
         self.rect:update()
         local mousePos = vector2.new(love.mouse.getPosition())
         if (self.rect:isInside(mousePos) and not self.isHover) then
