@@ -1,5 +1,5 @@
 --- Window scheduler
---- @class window
+--- @class windowScheduler
 local window = {
     onDirectoryDroppedT = {},
     onDisplayRotatedT = {},

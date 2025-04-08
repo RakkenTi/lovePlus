@@ -1,5 +1,5 @@
 --- Mouse scheduler
---- @class run
+--- @class runScheduler
 local run = {
     onDrawT = {},
     onUpdateT = {},

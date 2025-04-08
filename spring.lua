@@ -1,4 +1,5 @@
-local vector2 = require("src.shared.utils.vector2")
+--- @type Vector2Class
+local vector2 = relrequire("..loveplus.vector2", ...)
 
 --- @class springClass
 local spring = {}

@@ -1,6 +1,6 @@
-local vector2 = require("src.shared.utils.vector2")
-local utils = require("src.shared.utils.utils")
-local run = require("src.shared.utils.run")
+local vector2 = relrequire("..loveplus.vector2", ...)
+local colour = relrequire("..loveplus.colour", ...)
+local run = relrequire("..loveplus.run", ...)
 
 local screenSize = vector2.new(love.window.getMode())
 
@@ -54,7 +54,7 @@ function textClass:setAnchor(newAnchor)
 end
 
 function textClass:setColour(newColour)
-    self.colour = utils.RGBtoHST(newColour)
+    self.colour = colour.RGBtoHST(newColour)
 end
 
 function textClass:draw()

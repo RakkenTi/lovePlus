@@ -1,4 +1,5 @@
 -- for checking collisions
+--- @class collisionClass
 local collision = {}
 
 --- Checks if a given position is within a rectangle defined by a position and size.

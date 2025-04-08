@@ -1,11 +1,11 @@
 --- Random utility methods for any purposes
---- @class Util
-local utils = {}
+--- @class mathClass
+local math = {}
 
 --- Returns -1, 0, 1 depending on the sign of the number.
 --- @param num number
 --- @return number
-function utils.getSignFromNum(num)
+function math.getSignFromNum(num)
     if (num > 0) then return 1 elseif (num < 0) then return -1 else return 0 end
 end
 
@@ -14,7 +14,7 @@ end
 --- @param min number
 --- @param max number
 --- @return number
-function utils.clamp(num, min, max)
+function math.clamp(num, min, max)
     if (num > max) then
         return max
     end
@@ -27,8 +27,8 @@ function utils.clamp(num, min, max)
 end
 
 --- Lerp between a and b, using t
-function utils.lerp(a, b, t)
+function math.lerp(a, b, t)
     return a + (b - a) * t
 end
 
-return utils
+return math

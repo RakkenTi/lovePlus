@@ -1,5 +1,5 @@
 --- Mouse scheduler
---- @class mouse
+--- @class mouseScheduler
 local mouse = {
     onReleaseT = {},
     onPressT = {},
