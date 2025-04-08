@@ -1,6 +1,6 @@
 --// Modules
 local vector2 = relrequire("vector2", ...)
-local rect = relrequire("./shapes.rect", ...)
+local rect = relrequire("..shapes.rect", ...)
 local mouse =  relrequire("mouseUtils", ...)
 local run = relrequire("run", ...)
 
