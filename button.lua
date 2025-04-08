@@ -1,8 +1,8 @@
 --// Modules
-local vector2 = require("src.shared.utils.vector2")
-local rect = require("src.modules.rect")
-local mouse = require("src.shared.utils.mouse")
-local run = require("src.shared.utils.run")
+local vector2 = relrequire("vector2", ...)
+local rect = relrequire("..shapes.rect", ...)
+local mouse =  relrequire("mouseUtils", ...)
+local run = relrequire("run", ...)
 
 --- A class for creating buttons
 --- A button is a rect wrapped with special events.
