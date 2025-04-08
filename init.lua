@@ -4,9 +4,6 @@ local init = {}
 --- @type collisionClass
 init.collision = relrequire("collision", ...)
 
---- @type buttonClass
-init.button = relrequire("button", ...)
-
 --- @type textClass
 init.text = relrequire("text", ...)
 
