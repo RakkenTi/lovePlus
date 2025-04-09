@@ -16,7 +16,7 @@ init.colour = relrequire("colour", ...)
 --- @type springClass
 init.spring = relrequire("spring", ...)
 
---- @type Vector2Class
+--- @type vector2Class
 init.vector2 = relrequire("vector2", ...)
 
 --- @type mouseUtils

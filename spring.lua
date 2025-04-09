@@ -1,4 +1,4 @@
---- @type Vector2Class
+--- @type vector2Class
 local vector2 = relrequire("..loveplus.vector2", ...)
 
 --- @class springClass

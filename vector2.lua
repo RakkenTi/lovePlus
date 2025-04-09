@@ -1,4 +1,4 @@
---- @class Vector2Class
+--- @class vector2Class
 local vector2 = {}
 vector2.__index = vector2
 
